@@ -29,6 +29,18 @@ public class DoWhileCuti14 {
                     // benar tanpa menghentikan program
                     continue;
                 }
+
+            } else if (konfirmasi.equalsIgnoreCase("t")) {
+                // konfirmasi jika ingin keluar
+                System.out.print("Apakah anda yakin untuk keluar? (y/t) : ");
+                konfirmasi = sc.next();
+
+                if (konfirmasi.equalsIgnoreCase("y")) { // jika y maka akan break dan loop akan berhenti
+                    System.out.println("Selamat tinggal!");
+                    break;
+                } else if (konfirmasi.equalsIgnoreCase("t")) { // jika t maka continue dan loop akan memulai ulang
+                    continue;
+                }
             }
         } while (jatahCuti > 0);
 

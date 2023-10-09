@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class DoWhileCuti14 {
 
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         int jatahCuti, jumlahHari;
@@ -25,7 +25,9 @@ public class DoWhileCuti14 {
                     System.out.println("Sisa jatah cuti : " + jatahCuti);
                 } else {
                     System.out.println("Sisa jatah cuti anda tidak mencukupi");
-                    break;
+                    // dengan mengganti break dengan continue, user dapat mengisi ulang input sampai
+                    // benar tanpa menghentikan program
+                    continue;
                 }
             }
         } while (jatahCuti > 0);

@@ -1,4 +1,4 @@
-public class TeoriMandiriA14 {
+public class TeoriMandiriB14 {
 
     public static void main(String[] args) {
 

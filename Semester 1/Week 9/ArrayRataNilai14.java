@@ -21,6 +21,17 @@ public class ArrayRataNilai14 {
             total += nilaiMhs[i];
         }
 
+        // perulangan untuk menghitung total nilai mahasiswa
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            // jika rata-rata nilai mahasiswa lebih dari 70, maka mahasiswa dinyatakan lulus
+            if (nilaiMhs[i] > 70) {
+                System.out.println("Mahasiswa ke-" + i + " lulus!");
+                // jika sebaliknya, maka mahasiswa dinyatakan tidak lulus
+            } else {
+                System.out.println("Mahasiswa ke-" + i + " tidak lulus!");
+            }
+        }
+
         // menghitung rata-rata nilai mahasiswa
         rata2 = total / nilaiMhs.length;
         System.out.println("Rata-rata nilai = " + rata2);

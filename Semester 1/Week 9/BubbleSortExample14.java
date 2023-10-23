@@ -9,7 +9,8 @@ public class BubbleSortExample14 {
             // perulangan akan berjalan sampai perulangan diatas tidak berjalan
             for (int j = 1; j < intData.length - i; j++) {
                 // untuk mengecek apakah bilangan sebelumnya lebih besar
-                if (intData[j - 1] > intData[j]) {
+                // descending
+                if (intData[j - 1] < intData[j]) {
 
                     // swap elemen
                     temp = intData[j];

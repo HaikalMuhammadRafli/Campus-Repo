@@ -35,22 +35,26 @@ public class BioskopWithScanner14 {
                         System.out.print("Masukkan nama : ");
                         nama = sc.nextLine();
 
-                        // input baris
-                        System.out.print("Masukkan baris : ");
-                        baris = sc.nextInt();
+                        do {
 
-                        // input kolom
-                        System.out.print("Masukkan kolom : ");
-                        kolom = sc.nextInt();
-                        sc.nextLine();
+                            // input baris
+                            System.out.print("Masukkan baris : ");
+                            baris = sc.nextInt();
 
-                        // menyimpan nama di indeks baris dan kolom yang sudah ditentukan
-                        if (penonton[baris - 1][kolom - 1] == null) {
-                            penonton[baris - 1][kolom - 1] = nama;
-                        } else {
-                            System.out.println("Kursi tidak tersedia!");
-                            continue;
-                        }
+                            // input kolom
+                            System.out.print("Masukkan kolom : ");
+                            kolom = sc.nextInt();
+                            sc.nextLine();
+
+                            // menyimpan nama di indeks baris dan kolom yang sudah ditentukan
+                            if (penonton[baris - 1][kolom - 1] == null || penonton[baris - 1][kolom - 1] == "***") {
+                                penonton[baris - 1][kolom - 1] = nama;
+                            } else {
+                                System.out.println("Kursi tidak tersedia!");
+                                System.out.println("Masukkan lagi posisi kursi!\n");
+                            }
+
+                        } while (penonton[baris - 1][kolom - 1].equals(nama) == false);
 
                         // opsi untuk lanjut atau tidak
                         System.out.print("Input penonton lainnya? (y/t) : ");
@@ -65,6 +69,9 @@ public class BioskopWithScanner14 {
                     // looping untuk mengoutputkan penonton di setiap row
                     System.out.println("\nDaftar penonton!");
                     for (int i = 0; i < penonton.length; i++) {
+                        for (int j = 0; j < penonton[i].length; j++) {
+                            penonton[i][j] = penonton[i][j] == null ? "***" : penonton[i][j];
+                        }
                         System.out
                                 .println("Penonton pada baris ke-" + (i + 1) + " : " + String.join(" ,", penonton[i]));
                     }

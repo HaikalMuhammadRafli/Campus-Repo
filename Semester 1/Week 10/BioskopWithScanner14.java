@@ -45,7 +45,12 @@ public class BioskopWithScanner14 {
                         sc.nextLine();
 
                         // menyimpan nama di indeks baris dan kolom yang sudah ditentukan
-                        penonton[baris - 1][kolom - 1] = nama;
+                        if (penonton[baris - 1][kolom - 1] == null) {
+                            penonton[baris - 1][kolom - 1] = nama;
+                        } else {
+                            System.out.println("Kursi tidak tersedia!");
+                            continue;
+                        }
 
                         // opsi untuk lanjut atau tidak
                         System.out.print("Input penonton lainnya? (y/t) : ");

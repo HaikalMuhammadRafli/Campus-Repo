@@ -9,8 +9,8 @@ public class Square14 {
         System.out.print("Masukkan nilai N : ");
         int N = sc.nextInt();
 
-        for (int i = 1; i <= N; i++) {
-            for (int j = 1; j <= N; j++) {
+        for (int iOuter = 0; iOuter <= N; iOuter++) {
+            for (int i = 1; i <= N; i++) {
                 System.out.print("*");
             }
             System.out.println();

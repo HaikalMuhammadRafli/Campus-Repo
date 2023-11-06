@@ -24,6 +24,13 @@ public class Quiz14 {
                 System.out.print("Tebak angka (1-10): ");
                 int answer = input.nextInt();
                 input.nextLine();
+
+                if (answer < number) {
+                    System.out.println("Tebakanmu lebih kecil daripada jawabannya!");
+                } else if (answer > number) {
+                    System.out.println("Tebakanmu lebih besar daripada jawabannya!");
+                }
+
                 // jika jawaban == number maka success akan bernilai true
                 success = (answer == number);
 

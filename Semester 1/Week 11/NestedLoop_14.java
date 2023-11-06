@@ -4,10 +4,13 @@ public class NestedLoop_14 {
 
     public static void main(String[] args) {
 
+        // deklarasi scanner
         Scanner scanner = new Scanner(System.in);
 
+        // deklarasi array temps[][]
         double temps[][] = new double[5][7];
 
+        // looping input suhu setiap hari di setiap kota dan dimasukkan ke dalam array
         for (int i = 0; i < temps.length; i++) {
             System.out.println("Kota ke-" + i);
             for (int j = 0; j < temps[0].length; j++) {
@@ -17,6 +20,7 @@ public class NestedLoop_14 {
             System.out.println();
         }
 
+        // looping output suhu setiap hari di setiap kota
         for (int i = 0; i < temps.length; i++) {
             System.out.print("Kota ke-" + (i + 1) + ": ");
             for (int j = 0; j < temps[0].length; j++) {

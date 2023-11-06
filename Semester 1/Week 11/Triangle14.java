@@ -17,6 +17,7 @@ public class Triangle14 {
                 System.out.print("*");
                 j++;
             }
+            // Setelah inner loop diberikan new line
             System.out.println();
             i++;
         }

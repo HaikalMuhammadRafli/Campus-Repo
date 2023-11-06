@@ -21,7 +21,6 @@ public class NestedLoop_14 {
         }
 
         // looping output suhu setiap hari di setiap kota
-
         int i = 0;
         for (double[] kota : temps) {
             System.out.print("Kota ke-" + (i + 1) + ": ");
@@ -30,6 +29,19 @@ public class NestedLoop_14 {
                 System.out.print(suhu + " ");
             }
             System.out.println();
+        }
+
+        System.out.println();
+        // looping rata2 setiap kota
+        int count = 0;
+        for (double[] kota : temps) {
+            double total = 0, rata2;
+            for (double suhu : kota) {
+                total += suhu;
+            }
+            rata2 = total / temps[0].length;
+            count++;
+            System.out.println("Rata-rata kota ke-" + count + " : " + rata2);
         }
 
         scanner.close();

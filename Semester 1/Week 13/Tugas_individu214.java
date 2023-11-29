@@ -72,6 +72,26 @@ public class Tugas_individu214 {
                 + array[mhs][minggu]);
     }
 
+    static void NilaiTerendah(String[][] array) {
+
+        int nilaiTerendah = 100, mhs = 0, minggu = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (j != 0) {
+                    if (Integer.parseInt(array[i][j]) < nilaiTerendah) {
+                        nilaiTerendah = Integer.parseInt(array[i][j]);
+                        mhs = i;
+                        minggu = j;
+                    }
+                }
+            }
+        }
+
+        System.out.println("Nilai terendah dimiliki oleh " + array[mhs][0] + " di minggu ke- " + minggu + " : "
+                + array[mhs][minggu]);
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -99,6 +119,10 @@ public class Tugas_individu214 {
 
         System.out.println("----- Nilai Terbesar -----");
         NilaiTerbesar(nilaiMhs);
+        System.out.println();
+
+        System.out.println("----- Nilai Terendah -----");
+        NilaiTerendah(nilaiMhs);
         System.out.println();
 
         sc.close();

@@ -1,6 +1,6 @@
-# JOBSHEET II - OBJECT
+# <p align="center">LAPORAN JOBSHEET II - OBJECT</p>
 
-## IDENTITAS MAHASISWA
+### **IDENTITAS MAHASISWA**
 **Nama :** Haikal Muhammad Rafli<br>
 **NIM :** 2341720008<br>
 **Kelas :** TI-1B<br>
@@ -8,9 +8,9 @@
 
 ## PRAKTIKUM
 
-### 1 Percobaan 1: Deklarasi Class, Atribut dan Method
+### **1.0 Percobaan 1: Deklarasi Class, Atribut dan Method**
 
-#### 1.1 Kode Percobaan :
+### 1.1 Kode Percobaan :
 
 ```java
 public class Buku14 {
@@ -39,18 +39,21 @@ public class Buku14 {
     }
 }
 ```
-#### 1.2 Hasil Percobaan :
+### 1.2 Hasil Percobaan :
 
 ![Hasil](./docs/SS%20hasil%20percobaan%201.png)
 
-#### 1.3 Pertanyaan dan Jawaban :
+### 1.3 Pertanyaan dan Jawaban :
 
 1) Sebutkan dua karakteristik class atau object! <br>
 **Jawaban :** <br> ``Dua kerakteristik dari class atau object adalah "memiliki sesuatu" atau "atribut" dan "melakukan sesuatu" atau "method".``
+
 2) Perhatikan class Buku pada Praktikum 1 tersebut, ada berapa atribut yang dimiliki oleh class Buku? Sebutkan apa saja atributnya! <br>
 **Jawaban :** <br> ``Terdapat 5 atribut pada class Buku. Yaitu judul buku, nama pengarang, jumlah pengarang, stok buku, dan harga buku.``
+
 3) Ada berapa method yang dimiliki oleh class tersebut? Sebutkan apa saja methodnya! <br>
 **Jawaban :** <br> ``Terdapat 4 method pada class Buku. Yaitu tampilInformasi(), terjual(int jml), restock(int jml), dan gantiHarga(int hrg).``
+
 4) Perhatikan method terjual() yang terdapat di dalam class Buku. Modifikasi isi method tersebut sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)! <br>
 **Jawaban :** <br>
 ``Hasil modifikasi :``
@@ -63,14 +66,15 @@ public class Buku14 {
             }
         }
     ```
+
 5) Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int? <br>
 **Jawaban :** <br> ``Menurut saya, karena method restock() berguna untuk menambah stok yang ada di dalam objek. Sehingga parameter int tersebut berguna untuk menyimpan nilai yang nanti ditambahkan dengan stok yang tersedia di dalam objek.``
 
 <hr>
 
-### 2 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+### **2.0 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method**
 
-#### 2.1 Kode Percobaan :
+### 2.1 Kode Percobaan :
 
 ```java
 public class BukuMain14 {
@@ -91,11 +95,11 @@ public class BukuMain14 {
 }
 ```
 
-#### 2.2 Hasil Percobaan :
+### 2.2 Hasil Percobaan :
 
 ![Hasil](./docs/SS%20hasil%20percobaan%202.PNG)
 
-#### 2.3 Pertanyaan dan Jawaban :
+### 2.3 Pertanyaan dan Jawaban :
 
 1) Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi! Apa nama object yang dihasilkan? <br>
 **Jawaban :** <br>
@@ -103,6 +107,7 @@ public class BukuMain14 {
     ```java
     Buku14 bk1 = new Buku14();
     ```
+
 2) Bagaimana cara mengakses atribut dan method dari suatu objek? <br>
 **Jawaban :** <br> ``Dengan cara "nama_object.nama_atribut/nama_method". Contohnya :``
     ```java
@@ -111,6 +116,7 @@ public class BukuMain14 {
     //method
     bk1.tampilInformasi();
     ```
+
 3) Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda? <br>
 **Jawaban :** <br>
 ``Karena harga object tersebut diganti di baris kode :``
@@ -120,9 +126,9 @@ public class BukuMain14 {
 
 <hr>
 
-### 3 Percobaan 3: Membuat Konstruktor
+### **3.0 Percobaan 3: Membuat Konstruktor**
 
-#### 3.1 Kode Percobaan :
+### 3.1 Kode Percobaan :
 
 ```java
 public class Buku14 {
@@ -187,11 +193,11 @@ public class BukuMain14 {
 }
 ```
 
-#### 3.2 Hasil Percobaan :
+### 3.2 Hasil Percobaan :
 
 ![Hasil](./docs/SS%20hasil%20percobaan%203.PNG)
 
-#### 3.3 Pertanyaan dan Jawaban :
+### 3.3 Pertanyaan dan Jawaban :
 
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk mendeklarasikan konstruktor berparameter! <br>
 **Jawaban :** <br>
@@ -205,12 +211,16 @@ public class BukuMain14 {
             harga = har;
         }
     ```
+
 2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut? <br>
 **Jawaban :** <br> ``Baris program tersebut melakukan instansiasi object Buku14 baru yang bernama bk2 dengan menggunakan konstruktor berparameter.``
+
 3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana hasilnya? Jelaskan mengapa hasilnya demikian! <br>
 **Jawaban :** <br> ``Hasilnya adalah baris kode yang mengintansiasi object Buku14 dengan nama bk1 dengan menggunakan konstruktor default / tanpa parameter menjadi error. Karena konstruktor yang ada hanya konstruktor yang menggunakan parameter, sehingga instansiasi yang tidak ada parameternya menjadi error dan membutuhkan parameter.``
+
 4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses secara berurutan? Jelaskan alasannya! <br>
 **Jawaban :** <br> ``Tidak harus berurutan, karena method-method yang ada di dalam class Buku bersifat independen atau bisa dipanggil satu-persatu.``
+
 5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor berparameter dari class Buku! <br>
 **Jawaban :** <br>
 ``Baris kode : ``
@@ -220,9 +230,9 @@ public class BukuMain14 {
 
 <hr>
 
-### 4 Latihan Praktikum
+### **4.0 Latihan Praktikum**
 
-#### SOAL DAN JAWABAN
+### SOAL DAN JAWABAN
 
 1) Pada class Buku yang telah dibuat, tambahkan tiga method yaitu hitungHargaTotal(), hitungDiskon(), dan hitungHargaBayar() dengan penjelasan sebagai berikut:
 - Method hitungHargaTotal() digunakan untuk menghitung harga total yang merupakan perkalian antara harga dengan jumlah buku yang terjual

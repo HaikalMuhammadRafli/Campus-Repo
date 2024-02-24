@@ -46,7 +46,7 @@ public class Buku14 {
 #### 1.3 Pertanyaan dan Jawaban :
 
 1) Sebutkan dua karakteristik class atau object! <br>
-**Jawaban :** 
+**Jawaban :** ``Dua kerakteristik dari class atau object adalah memiliki sesuatu / atribut dan melakukan sesuatu / method.``
 2) Perhatikan class Buku pada Praktikum 1 tersebut, ada berapa atribut yang dimiliki oleh class Buku? Sebutkan apa saja atributnya! <br>
 **Jawaban :** Terdapat 5 atribut pada class Buku. Yaitu judul buku, nama pengarang, jumlah pengarang, stok buku, dan harga buku.
 3) Ada berapa method yang dimiliki oleh class tersebut? Sebutkan apa saja methodnya! <br>
@@ -236,23 +236,23 @@ Baris kode :
 
 **Jawaban :** <br>
 ```java
-int hitungHargaTotal(int jml) {
-        return harga * jml;
+int hitungHargaTotal() {
+        return harga * qty;
     }
 
-    int hitungDiskon(int jml) {
-        int total = hitungHargaTotal(jml);
-        if (total > 150000) {
-            return total * 12 / 100;
-        } else if (total >= 75000 && total <= 150000) {
-            return total * 5 / 100;
+    int hitungDiskon() {
+        int diskon = hitungHargaTotal();
+        if (diskon > 150000) {
+            return diskon * 12 / 100;
+        } else if (diskon >= 75000 && diskon <= 150000) {
+            return diskon * 5 / 100;
         } else {
-            return total;
+            return diskon;
         }
     }
 
-    int hitungHargaBayar(int jml) {
-        return hitungHargaTotal(jml) - hitungDiskon(jml);
+    int hitungHargaBayar() {
+        return hitungHargaTotal() - hitungDiskon();
     }
 ```
 
@@ -262,3 +262,7 @@ int hitungHargaTotal(int jml) {
 - Method moveLeft() digunakan untuk mengubah posisi dragon ke kiri (koordinat x akan berkurang 1), sedangkan moveRight() untuk bergerak ke kanan (koordinat x akan bertambah 1). Perlu diperhatikan bahwa koordinat x tidak boleh lebih kecil dari 0 atau lebih besar dari  nilai width. Jika koordinat x < 0 atau x > width maka panggil method detectCollision()
 - Method moveUp() digunakan untuk mengubah posisi dragon ke atas (koordinat y akan berkurang 1), sedangkan moveDown() untuk bergerak ke bawah (koordinat y akan bertambah 1). Perlu diperhatikan bahwa koordinat y tidak boleh lebih kecil dari 0 atau lebih besar dari nilai height. Jika koordinat y < 0 atau y > height maka panggil method detectCollision()
 - Method detectCollision() akan mencetak pesan “Game Over” apabila dragon menyentuh ujung area permainan
+
+<br>
+
+**Jawaban :** <br>

@@ -266,7 +266,12 @@ int hitungHargaTotal() {
     }
 ```
 
+**Hasil Kode Program :** <br>
+
+![Hasil](./docs/SS%204.1.PNG)
+
 2) Penjelasan dari atribut dan method pada class Dragon tersebut adalah sebagai berikut:
+
 - Atribut x digunakan untuk menyimpan posisi koordinat x (mendatar) dari dragon, sedangkan atribut y untuk posisi koordinat y (vertikal)
 - Atribut width digunakan untuk menyimpan lebar dari area permainan, sedangkan height untuk menyimpan panjang area
 - Method moveLeft() digunakan untuk mengubah posisi dragon ke kiri (koordinat x akan berkurang 1), sedangkan moveRight() untuk bergerak ke kanan (koordinat x akan bertambah 1). Perlu diperhatikan bahwa koordinat x tidak boleh lebih kecil dari 0 atau lebih besar dari  nilai width. Jika koordinat x < 0 atau x > width maka panggil method detectCollision()
@@ -374,3 +379,7 @@ public class DragonMain {
     }
 }
 ```
+
+**Hasil Kode Program :** <br>
+
+![Hasil](./docs/SS%204.2.PNG)

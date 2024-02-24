@@ -70,7 +70,7 @@ public class Buku14 {
 5) Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int? <br>
 **Jawaban :** <br> ``Menurut saya, karena method restock() berguna untuk menambah stok yang ada di dalam objek. Sehingga parameter int tersebut berguna untuk menyimpan nilai yang nanti ditambahkan dengan stok yang tersedia di dalam objek.``
 
-<hr>
+<br><hr>
 
 ### **2.0 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method**
 
@@ -124,7 +124,7 @@ public class BukuMain14 {
     bk1.gantiHarga(60000);
     ```
 
-<hr>
+<br><hr>
 
 ### **3.0 Percobaan 3: Membuat Konstruktor**
 
@@ -228,7 +228,7 @@ public class BukuMain14 {
     Buku14 bukuHaikal = new Buku14("Wake Up", "Haikal Muhammad Rafli", 1, 1, 10000000);
     ```
 
-<hr>
+<br><hr>
 
 ### **4.0 Latihan Praktikum**
 

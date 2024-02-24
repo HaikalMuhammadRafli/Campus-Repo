@@ -20,5 +20,6 @@ public class BukuMain14 {
 
         Buku14 bukuHaikal = new Buku14("Wake Up", "Haikal Muhammad Rafli", 1, 1, 10000000);
         bukuHaikal.tampilInformasi();
+        bukuHaikal.terjual(1);
     }
 }

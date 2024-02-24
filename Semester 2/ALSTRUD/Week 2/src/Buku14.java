@@ -2,7 +2,7 @@
 public class Buku14 {
 
     String judul, pengarang;
-    int halaman, stok, harga;
+    int halaman, stok, harga, qty;
 
     Buku14() {
 
@@ -25,8 +25,12 @@ public class Buku14 {
     }
 
     void terjual(int jml) {
-        if (stok >= jml) {
-            stok -= jml;
+        qty = jml;
+        if (stok >= qty) {
+            stok -= qty;
+            System.out.println("Total : Rp " + hitungHargaTotal());
+            System.out.println("Total Diskon : Rp " + hitungDiskon());
+            System.out.println("Bayar : Rp " + hitungHargaBayar());
         } else {
             System.out.println("Stok tidak mencukupi!");
         }
@@ -40,22 +44,22 @@ public class Buku14 {
         harga = hrg;
     }
 
-    int hitungHargaTotal(int jml) {
-        return harga * jml;
+    int hitungHargaTotal() {
+        return harga * qty;
     }
 
-    int hitungDiskon(int jml) {
-        int total = hitungHargaTotal(jml);
-        if (total > 150000) {
-            return total * 12 / 100;
-        } else if (total >= 75000 && total <= 150000) {
-            return total * 5 / 100;
+    int hitungDiskon() {
+        int diskon = hitungHargaTotal();
+        if (diskon > 150000) {
+            return diskon * 12 / 100;
+        } else if (diskon >= 75000 && diskon <= 150000) {
+            return diskon * 5 / 100;
         } else {
-            return total;
+            return diskon;
         }
     }
 
-    int hitungHargaBayar(int jml) {
-        return hitungHargaTotal(jml) - hitungDiskon(jml);
+    int hitungHargaBayar() {
+        return hitungHargaTotal() - hitungDiskon();
     }
 }

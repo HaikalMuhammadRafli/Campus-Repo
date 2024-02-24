@@ -46,14 +46,14 @@ public class Buku14 {
 #### 1.3 Pertanyaan dan Jawaban :
 
 1) Sebutkan dua karakteristik class atau object! <br>
-**Jawaban :** ``Dua kerakteristik dari class atau object adalah memiliki sesuatu / atribut dan melakukan sesuatu / method.``
+**Jawaban :** <br> ``Dua kerakteristik dari class atau object adalah "memiliki sesuatu" atau "atribut" dan "melakukan sesuatu" atau "method".``
 2) Perhatikan class Buku pada Praktikum 1 tersebut, ada berapa atribut yang dimiliki oleh class Buku? Sebutkan apa saja atributnya! <br>
-**Jawaban :** Terdapat 5 atribut pada class Buku. Yaitu judul buku, nama pengarang, jumlah pengarang, stok buku, dan harga buku.
+**Jawaban :** <br> ``Terdapat 5 atribut pada class Buku. Yaitu judul buku, nama pengarang, jumlah pengarang, stok buku, dan harga buku.``
 3) Ada berapa method yang dimiliki oleh class tersebut? Sebutkan apa saja methodnya! <br>
-**Jawaban :** Terdapat 4 method pada class Buku. Yaitu tampilInformasi(), terjual(int jml), restock(int jml), dan gantiHarga(int hrg).
+**Jawaban :** <br> ``Terdapat 4 method pada class Buku. Yaitu tampilInformasi(), terjual(int jml), restock(int jml), dan gantiHarga(int hrg).``
 4) Perhatikan method terjual() yang terdapat di dalam class Buku. Modifikasi isi method tersebut sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)! <br>
 **Jawaban :** <br>
-Hasil modifikasi :
+``Hasil modifikasi :``
     ```java
     void terjual(int jml) {
             if (stok >= jml) {
@@ -64,7 +64,7 @@ Hasil modifikasi :
         }
     ```
 5) Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int? <br>
-**Jawaban :** Menurut saya, karena method restock() berguna untuk menambah stok yang ada di dalam objek. Sehingga parameter int tersebut berguna untuk menyimpan nilai yang nanti  ditambahkan dengan stok yang tersedia di dalam objek.
+**Jawaban :** <br> ``Menurut saya, karena method restock() berguna untuk menambah stok yang ada di dalam objek. Sehingga parameter int tersebut berguna untuk menyimpan nilai yang nanti  ditambahkan dengan stok yang tersedia di dalam objek.``
 
 <hr>
 
@@ -99,12 +99,12 @@ public class BukuMain14 {
 
 1) Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi! Apa nama object yang dihasilkan? <br>
 **Jawaban :** <br>
-Baris kode bagian instansiasi dan nama object yang dihasilkan adalah bk1 :
+``Baris kode bagian instansiasi dan nama object yang dihasilkan adalah bk1 :``
     ```java
     Buku14 bk1 = new Buku14();
     ```
 2) Bagaimana cara mengakses atribut dan method dari suatu objek? <br>
-**Jawaban :** Dengan cara "nama_object.nama_atribut/nama_method". Contohnya :
+**Jawaban :** <br> ``Dengan cara "nama_object.nama_atribut/nama_method". Contohnya :``
     ```java
     //atribut
     System.out.println(bk1.judul);
@@ -113,7 +113,7 @@ Baris kode bagian instansiasi dan nama object yang dihasilkan adalah bk1 :
     ```
 3) Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda? <br>
 **Jawaban :** <br>
-Karena harga object tersebut diganti di baris kode :
+``Karena harga object tersebut diganti di baris kode :``
     ```java
     bk1.gantiHarga(60000);
     ```
@@ -195,7 +195,7 @@ public class BukuMain14 {
 
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk mendeklarasikan konstruktor berparameter! <br>
 **Jawaban :** <br>
-Baris kode yang mendeklarasikan konstruktor berparameter:
+``Baris kode yang mendeklarasikan konstruktor berparameter:``
     ```java
     Buku14(String jud, String pg, int hal, int stok, int har) {
             judul = jud;
@@ -206,14 +206,14 @@ Baris kode yang mendeklarasikan konstruktor berparameter:
         }
     ```
 2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut? <br>
-**Jawaban :** Baris program tersebut melakukan instansiasi object Buku14 baru yang bernama bk2 dengan menggunakan konstruktor berparameter.
+**Jawaban :** <br> ``Baris program tersebut melakukan instansiasi object Buku14 baru yang bernama bk2 dengan menggunakan konstruktor berparameter.``
 3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana hasilnya? Jelaskan mengapa hasilnya demikian! <br>
-**Jawaban :** Hasilnya adalah baris kode yang mengintansiasi object Buku14 dengan nama bk1 dengan menggunakan konstruktor default / tanpa parameter menjadi error. Karena konstruktor yang ada hanya konstruktor yang menggunakan parameter, sehingga instansiasi yang tidak ada parameternya menjadi error dan membutuhkan parameter.
+**Jawaban :** <br> ``Hasilnya adalah baris kode yang mengintansiasi object Buku14 dengan nama bk1 dengan menggunakan konstruktor default / tanpa parameter menjadi error. Karena konstruktor yang ada hanya konstruktor yang menggunakan parameter, sehingga instansiasi yang tidak ada parameternya menjadi error dan membutuhkan parameter.``
 4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses secara berurutan? Jelaskan alasannya! <br>
-**Jawaban :** Tidak harus berurutan, karena method-method yang ada di dalam class Buku bersifat independen atau bisa dipanggil satu-persatu. 
+**Jawaban :** <br> ``Tidak harus berurutan, karena method-method yang ada di dalam class Buku bersifat independen atau bisa dipanggil satu-persatu.``
 5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor berparameter dari class Buku! <br>
 **Jawaban :** <br>
-Baris kode : 
+``Baris kode : ``
     ```java
     Buku14 bukuHaikal = new Buku14("Wake Up", "Haikal Muhammad Rafli", 1, 1, 10000000);
     ```
@@ -266,3 +266,101 @@ int hitungHargaTotal() {
 <br>
 
 **Jawaban :** <br>
+``Dragon.java``
+```java
+public class Dragon {
+
+    int x, y, width, height;
+
+    Dragon(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    void moveLeft() {
+        x--;
+        if (x >= 0) {
+            printPosition();
+        } else {
+            detectCollision(x, y);
+            x++;
+        }
+    }
+
+    void moveRight() {
+        x++;
+        if (x <= width) {
+            printPosition();
+        } else {
+            detectCollision(x, y);
+            x--;
+        }
+    }
+
+    void moveUp() {
+        y--;
+        if (y >= 0) {
+            printPosition();
+        } else {
+            detectCollision(x, y);
+            y++;
+        }
+    }
+
+    void moveDown() {
+        y++;
+        if (y <= height) {
+            printPosition();
+        } else {
+            detectCollision(x, y);
+            y--;
+        }
+    }
+
+    void printPosition() {
+        System.out.println("Position : " + x + " | " + y);
+    }
+
+    void detectCollision(int x, int y) {
+        System.out.println("Game over!");
+        if (x < 0 || x > width) {
+            System.out.println("x position is out of bounds");
+        } else if (y < 0 || y > height) {
+            System.out.println("y position is out of bounds");
+        }
+
+        // untuk mengakhiri game. dicomment saja jika untuk testing
+        System.exit(0);
+    }
+}
+```
+<br>
+
+``DragonMain.java``
+```java
+public class DragonMain {
+
+    public static void main(String[] args) {
+
+        Dragon play = new Dragon(5, 5, 10, 10);
+        System.out.println("\nUp test");
+        for (int i = 0; i < 6; i++) {
+            play.moveUp();
+        }
+        System.out.println("\nDown test");
+        for (int i = 0; i < 11; i++) {
+            play.moveDown();
+        }
+        System.out.println("\nLeft test");
+        for (int i = 0; i < 6; i++) {
+            play.moveLeft();
+        }
+        System.out.println("\nRight test");
+        for (int i = 0; i < 11; i++) {
+            play.moveRight();
+        }
+    }
+}
+```

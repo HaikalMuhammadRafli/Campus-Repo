@@ -11,16 +11,16 @@ public class Pemilihan {
         System.out.println("==============================");
 
         System.out.print("Masukkan Nilai Tugas : ");
-        int nilaiTugas = sc.nextInt();
+        double nilaiTugas = sc.nextInt();
 
         System.out.print("Masukkan Nilai Kuis : ");
-        int nilaiKuis = sc.nextInt();
+        double nilaiKuis = sc.nextInt();
 
         System.out.print("Masukkan Nilai UTS : ");
-        int nilaiUTS = sc.nextInt();
+        double nilaiUTS = sc.nextInt();
 
         System.out.print("Masukkan Nilai UAS : ");
-        int nilaiUAS = sc.nextInt();
+        double nilaiUAS = sc.nextInt();
 
         System.out.println("==============================");
         System.out.println("==============================");

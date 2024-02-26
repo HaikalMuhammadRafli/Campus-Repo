@@ -55,7 +55,7 @@ public class Buku14 {
         } else if (diskon >= 75000 && diskon <= 150000) {
             return diskon * 5 / 100;
         } else {
-            return diskon;
+            return 0;
         }
     }
 

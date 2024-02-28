@@ -337,7 +337,7 @@ public class ArrayBalok {
 ```java
 public class Kerucut {
 
-    public int jariJari, sisiMiring, tinggi;
+    public int jariJari, sisiMiring;
 
     public double getTinggi() {
         return (Math.pow(sisiMiring, 2) - Math.pow(jariJari, 2));
@@ -348,7 +348,7 @@ public class Kerucut {
     }
 
     public double getVolume() {
-        return Math.PI * Math.pow(jariJari, 2) * tinggi / 3;
+        return Math.PI * Math.pow(jariJari, 2) * getTinggi() / 3;
     }
 }
 ```
@@ -418,8 +418,6 @@ public class Latihan1Main {
                 System.out.print("Masukkan sisi miring : ");
                 kcArray[i].sisiMiring = sc.nextInt();
                 sc.nextLine();
-                System.out.print("Masukkan tinggi : ");
-                kcArray[i].tinggi = sc.nextInt();
 
                 System.out.printf("Luas permukaan : %.2f\n", kcArray[i].getLuasPermukaan());
                 System.out.printf("Volume : %.2f\n", kcArray[i].getVolume());

@@ -29,8 +29,6 @@ public class Latihan1Main {
                 System.out.print("Masukkan sisi miring : ");
                 kcArray[i].sisiMiring = sc.nextInt();
                 sc.nextLine();
-                System.out.print("Masukkan tinggi : ");
-                kcArray[i].tinggi = sc.nextInt();
 
                 System.out.printf("Luas permukaan : %.2f\n", kcArray[i].getLuasPermukaan());
                 System.out.printf("Volume : %.2f\n", kcArray[i].getVolume());

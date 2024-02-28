@@ -32,6 +32,10 @@ public class Latihan2Main {
             System.out.println();
         }
 
+        Mahasiswa mhs = new Mahasiswa();
+        System.out.printf("Rata-rata IPK : %.2f\n", mhs.calcIPKAverage(mahasiswa));
+        mhs.showHighestIPK(mahasiswa);
+
         sc.close();
     }
 }

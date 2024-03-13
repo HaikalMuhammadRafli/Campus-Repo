@@ -32,5 +32,7 @@ public class MainPangkat {
             System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
                     + png[i].pangkatDc(png[i].nilai, png[i].pangkat));
         }
+
+        sc.close();
     }
 }

@@ -5,7 +5,7 @@ public class MainFaktorial {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("---------------");
+        System.out.println("------------------------");
         System.out.print("Masukkan jumlah elemen : ");
         int iJml = sc.nextInt();
 

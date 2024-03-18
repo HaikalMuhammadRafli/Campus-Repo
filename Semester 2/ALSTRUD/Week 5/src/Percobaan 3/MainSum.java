@@ -15,7 +15,7 @@ public class MainSum {
         Sum sm = new Sum(elm);
         System.out.println("============================================================");
         for (int i = 0; i < sm.elemen; i++) {
-            System.out.print("Masukkan untung bulan ke- " + (i + 1) + " = ");
+            System.out.print("Masukkan untung bulan ke - " + (i + 1) + " = ");
             sm.keuntungan[i] = sc.nextDouble();
             sc.nextLine();
         }

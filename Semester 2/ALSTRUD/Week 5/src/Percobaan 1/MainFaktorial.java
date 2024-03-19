@@ -22,6 +22,13 @@ public class MainFaktorial {
                     "Hasil penghitungan faktorial menggunakan Brute Force adalah : " + fk[i].faktorialBF(fk[i].nilai));
         }
 
+        System.out.println("HASIL - BRUTE FORCE WHILE");
+        for (int i = 0; i < fk.length; i++) {
+            System.out.println(
+                    "Hasil penghitungan faktorial menggunakan Brute Force While adalah : "
+                            + fk[i].faktorialBFWhile(fk[i].nilai));
+        }
+
         System.out.println("HASIL - DIVIDE AND CONQUER");
         for (int i = 0; i < fk.length; i++) {
             System.out.println("Hasil penghitungan faktorial menggunakan Divide and Conquer adalah : "

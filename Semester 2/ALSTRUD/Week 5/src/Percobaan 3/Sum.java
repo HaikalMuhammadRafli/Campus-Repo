@@ -22,10 +22,10 @@ public class Sum {
 
         } else if (l < r) {
             int mid = (r + l) / 2;
-            double lsum = totalDC(arr, l, mid);
+            double lsum = totalDC(arr, l, mid - 1);
             double rsum = totalDC(arr, mid + 1, r);
 
-            return lsum + rsum;
+            return lsum + rsum + arr[mid];
         }
 
         return 0;

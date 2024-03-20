@@ -3,6 +3,11 @@ public class Pangkat {
 
     public int nilai, pangkat;
 
+    Pangkat(int nilai, int pangkat) {
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
+
     int pangkatBf(int a, int n) {
         int hasil = a;
 

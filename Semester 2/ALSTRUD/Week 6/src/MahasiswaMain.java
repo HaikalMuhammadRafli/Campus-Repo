@@ -29,7 +29,7 @@ public class MahasiswaMain {
         list.tampil();
 
         // Percobaan 3
-        System.out.println("Data mahasiswa setelah sorting insertion asc berdasarkan ipk");
+        System.out.println("Data mahasiswa setelah sorting insertion desc berdasarkan ipk");
         list.insertionSort();
         list.tampil();
     }

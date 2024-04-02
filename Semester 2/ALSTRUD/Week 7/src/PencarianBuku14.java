@@ -156,7 +156,7 @@ public class PencarianBuku14 {
 
             if (cari.compareTo(listBk[mid].judulBuku) == 0) {
                 return (mid);
-            } else if (cari.length() == listBk[mid].judulBuku.length() && cari.compareTo(listBk[mid].judulBuku) < 0) {
+            } else if (cari.length() <= listBk[mid].judulBuku.length() && cari.compareTo(listBk[mid].judulBuku) < 0) {
                 return findJudulBinarySearch(cari, left, mid - 1);
             } else {
                 return findJudulBinarySearch(cari, mid + 1, right);

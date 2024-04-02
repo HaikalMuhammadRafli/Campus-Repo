@@ -131,7 +131,7 @@ public class PencarianBuku14 {
 
             for (int j = i + 1; j < listBk.length; j++) {
                 if (listBk[j].judulBuku.length() == listBk[idxMin].judulBuku.length()) {
-                    if (Character.compare(listBk[j].judulBuku.charAt(0), listBk[idxMin].judulBuku.charAt(0)) < 0) {
+                    if (listBk[j].judulBuku.compareTo(listBk[idxMin].judulBuku) < 0) {
                         idxMin = j;
                     }
                 } else if (listBk[j].judulBuku.length() < listBk[idxMin].judulBuku.length()) {
@@ -156,8 +156,7 @@ public class PencarianBuku14 {
 
             if (cari.compareTo(listBk[mid].judulBuku) == 0) {
                 return (mid);
-            } else if (cari.compareTo(listBk[mid].judulBuku) < 0
-                    && (Character.compare(listBk[mid].judulBuku.charAt(0), cari.charAt(0)) < 0)) {
+            } else if (cari.length() == listBk[mid].judulBuku.length() && cari.compareTo(listBk[mid].judulBuku) < 0) {
                 return findJudulBinarySearch(cari, left, mid - 1);
             } else {
                 return findJudulBinarySearch(cari, mid + 1, right);

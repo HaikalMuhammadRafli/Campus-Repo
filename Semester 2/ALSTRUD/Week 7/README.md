@@ -503,6 +503,11 @@ public class MergeSortMain14 {
 
 ### **4.0 Latihan Praktikum**
 
+### 4.1.0 latihan Praktikum 1 :
+Modifikasi percobaan searching diatas dengan ketentuan berikut ini :
+- Ubah tipe data dari kode Buku yang awalnya int menjadi String
+- Tambahkan method untuk pencarian kode Buku (bertipe data String) dengan menggunakan sequential search dan binary search.
+
 ### 4.1.1 Kode latihan 1 :
 
 ``Buku14.java`` <br>
@@ -696,6 +701,11 @@ public class BukuMain14 {
 ![Hasil](./docs/4.2.1.PNG)
 
 <br>
+
+### 4.2.0 latihan Praktikum 2 :
+Modifikasi percobaan searching diatas dengan ketentuan berikut ini
+- Tambahkan method pencarian judul buku menggunakan sequential search dan binary search. Sebelum dilakukan searching dengan binary search data harus dilakukan pengurutan dengan menggunakan algoritma Sorting (bebas pilih algoritma sorting apapun)! Sehingga ketika input data acak, maka algoritma searching akan tetap berjalan
+- Buat aturan untuk mendeteksi hasil pencarian judul buku yang lebih dari 1 hasil dalam bentuk kalimat peringatan! Pastikan algoritma yang diterapkan sesuai dengan kasus yang diberikan!
 
 ### 4.2.1 Kode latihan 2 :
 

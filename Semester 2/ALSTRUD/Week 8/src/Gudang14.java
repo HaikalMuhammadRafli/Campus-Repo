@@ -89,4 +89,50 @@ public class Gudang14 {
         }
         return biner;
     }
+
+    // Latihan Praktikum
+    public Barang14 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang14 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah : " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong");
+            return null;
+        }
+    }
+
+    public void cariBarang(String key) {
+        Barang14 barangSesuai[] = new Barang14[size];
+        int count = 0;
+
+        // Bagian searching
+        for (int i = 0; i < size; i++) {
+            if (key.matches("-?\\d+(\\.\\d+)?") && tumpukan[i] != null && tumpukan[i].kode == Integer.parseInt(key)) {
+                barangSesuai[count] = tumpukan[i];
+                count++;
+            } else if (tumpukan[i] != null && tumpukan[i].nama.equalsIgnoreCase(key)) {
+                barangSesuai[count] = tumpukan[i];
+                count++;
+            }
+        }
+
+        // Bagian menampilkan
+        if (count > 0) {
+            System.out.println("--------------------------------");
+            System.out.println(count + " barang ditemukan!");
+
+            for (int i = 0; i < barangSesuai.length; i++) {
+                if (barangSesuai[i] != null) {
+                    System.out.println("Kode barang : " + barangSesuai[i].kode);
+                    System.out.println("Nama barang : " + barangSesuai[i].nama);
+                    System.out.println("Kategori barang : " + barangSesuai[i].kategori);
+                    System.out.println("================================");
+                }
+            }
+
+        } else {
+            System.out.println("Tidak ada barang yang ditemukan!");
+        }
+    }
 }

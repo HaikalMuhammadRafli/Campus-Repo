@@ -15,8 +15,10 @@ public class Utama14 {
             System.out.println("[1] Tambah barang");
             System.out.println("[2] Ambil barang");
             System.out.println("[3] Lihat barang teratas");
-            System.out.println("[4] Tampilkan tumpukan barang");
-            System.out.println("[5] Keluar");
+            System.out.println("[4] Lihat barang terbawah");
+            System.out.println("[5] Cari barang");
+            System.out.println("[6] Tampilkan tumpukan barang");
+            System.out.println("[7] Keluar");
             System.out.print("Pilih operasi : ");
             int pilihan = scanner.nextInt();
             scanner.nextLine();
@@ -43,10 +45,19 @@ public class Utama14 {
                     break;
 
                 case 4:
-                    gudang.tampilkanBarang();
+                    gudang.lihatBarangTerbawah();
                     break;
 
                 case 5:
+                    System.out.print("Masukkan kode atau nama barang : ");
+                    gudang.cariBarang(scanner.nextLine());
+                    break;
+
+                case 6:
+                    gudang.tampilkanBarang();
+                    break;
+
+                case 7:
                     scanner.close();
                     System.exit(0);
                     break;

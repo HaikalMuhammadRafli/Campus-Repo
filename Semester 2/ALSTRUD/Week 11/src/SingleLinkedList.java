@@ -82,4 +82,95 @@ public class SingleLinkedList {
             }
         }
     }
+
+    // Percobaan 2
+
+    int getData(int index) {
+        Node tmp = head;
+
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
+
+    int indexOf(int key) {
+        Node tmp = head;
+        int index = 0;
+
+        while (tmp != null && tmp.data != key) {
+            tmp = tmp.next;
+            index++;
+        }
+
+        if (tmp != null) {
+            return index;
+        } else {
+            return -1;
+        }
+    }
+
+    void removeFirst() {
+        if (!isEmpty()) {
+            head = head.next;
+        } else if (head == tail) {
+            head = tail = null;
+        } else {
+            System.out.println("Linked list masih kosong, " + "tidak dapat dihapus!");
+        }
+    }
+
+    void removeLast() {
+        if (!isEmpty()) {
+            Node temp = head;
+
+            while (temp.next != tail) {
+                temp = temp.next;
+            }
+
+            temp.next = null;
+            tail = temp.next;
+        }
+    }
+
+    void remove(int key) {
+        if (!isEmpty()) {
+            Node temp = head;
+
+            while (temp != null) {
+                if (temp.data == key && temp == head) {
+                    removeFirst();
+                    break;
+                } else if (temp.next.data == key) {
+                    temp.next = temp.next.next;
+
+                    if (temp.next == null) {
+                        tail = temp;
+                    }
+
+                    break;
+                }
+
+                temp = temp.next;
+            }
+        }
+    }
+
+    void removeAt(int index) {
+        if (index == 0) {
+            removeFirst();
+        } else {
+            Node temp = head;
+
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+
+            temp.next = temp.next.next;
+
+            if (temp.next == null) {
+                tail = temp;
+            }
+        }
+    }
 }

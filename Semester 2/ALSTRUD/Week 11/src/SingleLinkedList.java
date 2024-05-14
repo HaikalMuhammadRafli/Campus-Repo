@@ -60,7 +60,7 @@ public class SingleLinkedList {
             }
 
             temp = temp.next;
-        } while (temp == null);
+        } while (temp != null);
     }
 
     void insertAt(int index, int input) {

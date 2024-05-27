@@ -13,7 +13,10 @@
 ## Sistem Operasi
 ### Fitur ---
 
-|        |           |                  |
-| ------ | --------- | ---------------- |
-| **No** | **Fitur** | **Detail**       |
-| 1      | Move File | Memindahkan file |
+|        |                          |                                         |
+| ------ | ------------------------ | --------------------------------------- |
+| **No** | **Fitur**                | **Detail**                              |
+| 1      | Check Directory          | Memeriksa adanya direktori              |
+| 2      | Create New Directory     | Membuat direktori baru                  |
+| 2      | Rename Files / Directory | Mengganti nama dari file atau direktori |
+| 2      | Copy Files / Directories | Menyalin file dan direktori             |

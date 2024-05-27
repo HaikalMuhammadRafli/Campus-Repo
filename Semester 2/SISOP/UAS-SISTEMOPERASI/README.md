@@ -18,5 +18,5 @@
 | **No** | **Fitur**                | **Detail**                              |
 | 1      | Check Directory          | Memeriksa adanya direktori              |
 | 2      | Create New Directory     | Membuat direktori baru                  |
-| 2      | Rename Files / Directory | Mengganti nama dari file atau direktori |
-| 2      | Copy Files / Directories | Menyalin file dan direktori             |
+| 3      | Rename Files / Directory | Mengganti nama dari file atau direktori |
+| 4      | Copy Files / Directories | Menyalin file dan direktori             |

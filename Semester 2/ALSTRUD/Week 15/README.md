@@ -246,22 +246,22 @@ public class BinaryTreeMain14 {
 ### 1.3 Pertanyaan dan Jawaban :
 
 1. Mengapa dalam binary search tree proses pencarian data bisa lebih efektif dilakukan dibanding binary tree biasa? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Karena peletakan data dilakukan dengan urut dari yang terkecil (paling kiri) sampai yang terbesar (paling kanan)``
 
 2. Untuk apakah di class Node, kegunaan dari atribut left dan right? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Sebagai pointer ke node child kiri atau child kanan``
 
 3. Untuk apakah kegunaan dari atribut root di dalam class BinaryTree? dan Ketika objek tree pertama kali dibuat, apakah nilai dari root? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Kegunaannya adalah untuk menyimpan pointer node akar / node yang tidak memiliki predesesor. nilai dari root saat pertama kali dibuatnya objek tree adalah null``
 
 4. Ketika tree masih kosong, dan akan ditambahkan sebuah node baru, proses apa yang akan terjadi? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Mengecek apakah tree dalam kondisi kosong atau tidak. Jika kosong maka akan membuat node baru dan disimpan di dalam root. Sedangkan jika tidak kosong maka akan diletakkan sesuai nilai data yang diinputkan``
 
-5. Perhatikan method add(), di dalamnya terdapat baris program seperti di bawah ini. Jelaskan secara detil untuk apa baris program tersebut?
+5. Perhatikan method add(), di dalamnya terdapat baris program seperti di bawah ini. Jelaskan secara detail untuk apa baris program tersebut?
 
     ```java
-    if(data<current.data){
-        if(current.left!=null){
+    if(data < current.data){
+        if(current.left != null){
             current = current.left;
         }else{
             current.left = new Node(data);
@@ -269,7 +269,7 @@ public class BinaryTreeMain14 {
         }
     }
     ``` 
-    **Jawaban :** <br> ``   ``
+    **Jawaban :** <br> ``Baris diatas itu digunakan untuk mengecek apakah nilai data input itu lebih kecil dari pada data dari node current. Jika benar maka dilakukan pengecekan lagi apakah node  left dari node current itu tidak bernilai null. Jika benar maka akan melakukan traverse ke kiri sekali. Jika tidak benar maka akan menambahkan node baru di node kiri dari node current``
 
 <br><hr>
 
@@ -328,19 +328,19 @@ public class BinaryTreeArrayMain14 {
 ### 2.3 Pertanyaan dan Jawaban : 
 
 1. Apakah kegunaan dari atribut data dan idxLast yang ada di class BinaryTreeArray? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Kegunaan dari atribut data adalah untuk menyimpan elemen-elemen dari binary tree. Sedangkan kegunaan dari atribut idxLast adalah untuk menyimpan indeks dari elemen yang terakhir dimasukkan ke dalam tree``
 
 2. Apakah kegunaan dari method populateData()? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Kegunaannya adalah untuk menyimpan input elemen-elemen data[] dan index idxLast di dalam object tree array yang sudah dibuat``
 
 3. Apakah kegunaan dari method traverseInOrder()? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Kegunaannya adalah untuk melakukan traverse dan menampilkan data secara in order.``
 
-4. Jika suatu node binary tree disimpan dalam array indeks 2, maka di indeks berapakah posisi left child dan rigth child masin-masing? <br>
-**Jawaban :** <br> ``   ``
+4. Jika suatu node binary tree disimpan dalam array indeks 2, maka di indeks berapakah posisi left child dan right child masing-masing? <br>
+**Jawaban :** <br> ``Left child berada dalam posisi indeks ke (2 * 2 + 1 = 5) 5 dan right childnya berada dalam posisi indeks ke (2 * 2 + 2 = 6) 6``
 
 5. Apa kegunaan statement int idxLast = 6 pada praktikum 2 percobaan nomor 4? <br>
-**Jawaban :** <br> ``   ``
+**Jawaban :** <br> ``Kegunaannya adalah untuk menyimpan suatu integer di dalam variable idxLast yang digunakan untuk menyimpan indeks elemen terakhir dalam tree``
 
 <br><hr>
 
@@ -350,5 +350,140 @@ public class BinaryTreeArrayMain14 {
 
 ### 4.1.1 Kode Percobaan : 
 
-``Node14.java`` <br>
+``BinaryTree14.java`` <br>
 ```java
+void addRecursively(int data) {
+    root = addRecursively(root, data);
+}
+
+Node14 addRecursively(Node14 current, int data) {
+    if (current == null) {
+        return root = new Node14(data);
+    }
+
+    if (data < current.data) {
+        current.left = addRecursively(current.left, data);
+    } else if (data > current.data) {
+        current.right = addRecursively(current.right, data);
+    }
+
+    return current;
+}
+```
+
+<br><hr>
+
+### **4.2.0 Soal 2**
+
+### 4.2.1 Kode Percobaan : 
+
+``BinaryTree14.java`` <br>
+```java
+void findMaxMin() {
+    int min = findMin();
+    int max = findMax();
+
+    System.out.println("Nilai terkecil yang ada di dalam tree : " + min);
+    System.out.println("Nilai terbesar yang ada di dalam tree : " + max);
+}
+
+int findMin() {
+    Node14 current = root;
+
+    while (current.left != null) {
+        current = current.left;
+    }
+
+    return current.data;
+}
+
+int findMax() {
+    Node14 current = root;
+
+    while (current.right != null) {
+        current = current.right;
+    }
+
+    return current.data;
+}
+```
+
+<br><hr>
+
+### **4.3.0 Soal 3**
+
+### 4.3.1 Kode Percobaan : 
+
+``BinaryTree14.java`` <br>
+```java
+void printLeaves(Node14 node) {
+    if (node != null) {
+        if (node.left == null && node.right == null) {
+            System.out.print(" " + node.data);
+        }
+
+        printLeaves(node.left);
+        printLeaves(node.right);
+    }
+}
+```
+
+<br><hr>
+
+### **4.4.0 Soal 4**
+
+### 4.4.1 Kode Percobaan : 
+
+``BinaryTree14.java`` <br>
+```java
+int countLeaves(Node14 node) {
+    if (node == null) {
+        return 0;
+    }
+
+    if (node.left == null && node.right == null) {
+        return 1;
+    }
+
+    return countLeaves(node.left) + countLeaves(node.right);
+}
+
+void countLeaves() {
+    System.out.println("Jumlah leaf dalam tree = " + countLeaves(root));
+}
+```
+
+<br><hr>
+
+### **4.5.0 Soal 5**
+
+### 4.5.1 Kode Percobaan : 
+
+``BinaryTreeArray14.java`` <br>
+```java
+void add(int data) {
+    this.data[++idxLast] = data;
+}
+
+void traversePreOrder(int idxStart) {
+    if (idxStart <= idxLast) {
+        System.out.print(data[idxStart] + " ");
+        traverseInOrder(2 * idxStart + 1);
+        traverseInOrder(2 * idxStart + 2);
+    }
+}
+
+void traversePostOrder(int idxStart) {
+    if (idxStart <= idxLast) {
+        traverseInOrder(2 * idxStart + 1);
+        traverseInOrder(2 * idxStart + 2);
+        System.out.print(data[idxStart] + " ");
+    }
+}
+```
+
+### **4.0.0 Verifikasi Hasil Kode Program**
+
+![Hasil](./docs/4.111.PNG)
+
+![Hasil](./docs/4.222.PNG)

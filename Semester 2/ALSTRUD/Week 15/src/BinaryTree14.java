@@ -196,28 +196,49 @@ public class BinaryTree14 {
     }
 
     int findMin() {
-        Node14 current = root.left;
-        int result = root.data;
+        Node14 current = root;
 
-        while (current != null) {
-            if (result > current.left.data) {
-                current = current.left;
-            }
+        while (current.left != null) {
+            current = current.left;
         }
 
-        return result;
+        return current.data;
     }
 
     int findMax() {
-        Node14 current = root.right;
-        int result = root.data;
+        Node14 current = root;
 
-        while (current != null) {
-            if (result < current.right.data) {
-                current = current.right;
-            }
+        while (current.right != null) {
+            current = current.right;
         }
 
-        return result;
+        return current.data;
+    }
+
+    void printLeaves(Node14 node) {
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                System.out.print(" " + node.data);
+            }
+
+            printLeaves(node.left);
+            printLeaves(node.right);
+        }
+    }
+
+    int countLeaves(Node14 node) {
+        if (node == null) {
+            return 0;
+        }
+
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+
+        return countLeaves(node.left) + countLeaves(node.right);
+    }
+
+    void countLeaves() {
+        System.out.println("Jumlah leaf dalam tree = " + countLeaves(root));
     }
 }

@@ -31,8 +31,22 @@ public class Main {
         System.out.println(isOdd(15));
         System.out.println(addFor(2, 2, 2, 2, 2));
 
-        // Arguments
+        // Object
+        Gajah bobby = new Gajah("bobby", 12);
+        bobby.makan();
+        Gajah xavier = new Gajah("xavier", 30);
+        xavier.makan();
+
+        // Fetching String Arguments
         System.out.println("Random args : " + args[0]);
+
+        // Fetching integer Arguments
+        int[] intArgs = new int[10];
+        for (int i = 0; i < args.length; i++) {
+            intArgs[i] = Integer.parseInt(args[i]);
+        }
+
+        System.out.println("Hasil penjumlahan = " + addFor(intArgs));
     }
 
     static int add(int a, int b) {

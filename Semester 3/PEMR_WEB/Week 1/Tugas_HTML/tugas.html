@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Komentar Mahasiswa</title>
+    <link rel="stylesheet" href="tugas.css">
+    <style>
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+            <div class="input-box"><label for="name">Nama</label>
+                <input type="text" name="nama" id="nama">
+            </div>
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="input-box">
+                <label for="birth-date">Tanggal lahir</label>
+                <input type="date" name="birth-date" id="birth-date">
+            </div>
+            <div class="input-box">
+                <label for="gender">Jenis kelamin</label>
+                <select name="gender" id="gender">
+                    <option value="M" selected>Laki-laki</option>
+                    <option value="F">Perempuan</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="alamat">Alamat</label> <br>
+                <textarea name="alamat" id="alamat" cols="120" rows="14"></textarea>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Komentar</legend>
+            <div class="input-box">
+                <label for="source">Darimana Anda mengetahui buku ini?</label>
+                <select name="source" id="source">
+                    <option value="1" selected>Google</option>
+                    <option value="2">Sosial Media</option>
+                    <option value="3">Teman</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <p>Bagaimana Menurut anda terhadap buku ini?</p>
+                <input type="radio" name="rating" id="biasa">
+                <label for="biasa">Biasa</label>
+                <input type="radio" name="rating" id="bagus">
+                <label for="bagus">Bagus</label>
+                <input type="radio" name="rating" id="menarik">
+                <label for="menarik">Menarik</label>
+            </div>
+            <div class="input-box">
+                <label for="comment">Komentar</label> <br>
+                <textarea name="comment" id="comment" cols="40" rows="5"></textarea>
+                <br>
+                <input type="checkbox" name="confirm" id="confirm">
+                <label for="confirm">Kirim ke Email bila ada info terbaru</label>
+            </div>
+        </fieldset>
+        <br>
+        <div class="center">
+            <input class="btn" type="submit" value="Kirim">
+        </div>
+    </form>
+</body>
+
+</html>

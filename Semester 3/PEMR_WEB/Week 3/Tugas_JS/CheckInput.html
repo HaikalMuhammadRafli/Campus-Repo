@@ -10,13 +10,14 @@
 
             if (fn == "" && ln == "") {
                 alert("First name and Last name must be filled!")
+                return false;
             } else if (fn == "") {
                 alert("First name must be filled!")
+                return false;
             } else if (ln == "") {
                 alert("Last name must be filled!")
+                return false;
             }
-
-            return false;
         }
     </script>
 </head>

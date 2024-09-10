@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check Input</title>
+    <script>
+        function validateForm() {
+            var fn = document.forms["myForm"]["first-name"].value;
+            var ln = document.forms["myForm"]["last-name"].value;
+
+            if (fn == "" && ln == "") {
+                alert("First name and Last name must be filled!")
+            } else if (fn == "") {
+                alert("First name must be filled!")
+            } else if (ln == "") {
+                alert("Last name must be filled!")
+            }
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" action="#" method="POST" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="first-name">First Name : </label>
+            <input type="text" name="first-name" id="first-name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="last-name">Last Name : </label>
+            <input type="text" name="last-name" id="last-name">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

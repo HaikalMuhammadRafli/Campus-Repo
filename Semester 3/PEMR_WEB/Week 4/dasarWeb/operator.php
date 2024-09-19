@@ -70,7 +70,7 @@ $hasilTidakIdentik = $a !== $b;
 echo 'Hasil $a !== $b : ' . $hasilTidakIdentik . '<br>';
 echo "<br>";
 
-// soal cerita
+// soal cerita (haikal)
 $kursi = 45;
 $kursiTerpakai = 28;
 $persentaseKursiKosong = (($kursi - $kursiTerpakai) / $kursi) * 100;

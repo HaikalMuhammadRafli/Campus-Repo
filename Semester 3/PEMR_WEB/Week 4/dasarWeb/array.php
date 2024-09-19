@@ -79,7 +79,7 @@ foreach ($daftarSiswa as $siswa) {
 // menghitung nilai average total / jumlah nilai
 $nilaiAvg = $nilaiTotal / count($daftarSiswa);
 
-echo "Daftar siswa yang memiliki nilai diatas rata-rata : <br>";
+echo "Daftar siswa yang memiliki nilai diatas rata-rata ($nilaiAvg) : <br>";
 foreach ($daftarSiswa as $siswa) {
     echo ($siswa[1] > $nilaiAvg) ? "Nama: {$siswa[0]}, Nilai: {$siswa[1]} <br>" : "";
 }

@@ -9,7 +9,7 @@ if (isset($umur) && $umur >= 18) {
 }
 echo "<br><br>";
 
-//part 2
+// part 2
 $data = array("nama" => "Jane", "usia" => 25);
 
 if (isset($data["nama"])) {

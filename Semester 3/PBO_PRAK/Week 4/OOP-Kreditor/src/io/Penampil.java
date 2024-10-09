@@ -27,7 +27,7 @@ public class Penampil {
         System.out.println("+----------------------+----------------------+----------------------+");
     }
 
-    private String formatted(int space, double num) {
+    private static String formatted(int space, double num) {
         return String.format("%" + space + "s", num) ;
     }
 }

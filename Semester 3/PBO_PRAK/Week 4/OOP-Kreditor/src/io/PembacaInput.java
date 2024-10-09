@@ -1,6 +1,7 @@
 package io;
 
 import core.Pinjaman;
+import extension.PinjamanEfektif;
 
 public class PembacaInput {
 
@@ -58,7 +59,8 @@ public class PembacaInput {
         System.out.println("Jumlah Cicilan : " + jumlahCicilan);
 
         // masukkan ke properti
-        this.pinjaman = new Pinjaman(hutang, bunga, jumlahCicilan);
+//        this.pinjaman = new Pinjaman(hutang, bunga, jumlahCicilan);
+        this.pinjaman = new PinjamanEfektif(hutang, bunga, jumlahCicilan);
     }
 
     public Pinjaman getPinjaman() {

@@ -15,6 +15,18 @@ public class Pinjaman {
         this.daftarAngsuran = new Angsuran[(this.jumlahCicilan)];
     }
 
+    public double getHutang() {
+        return hutang;
+    }
+
+    public float getBunga() {
+        return bunga;
+    }
+
+    public int getJumlahCicilan() {
+        return jumlahCicilan;
+    }
+
     public void hitung() {
         // Hitung total bayar
         double totalBayar = this.hutang + (this.hutang * this.bunga / 100);

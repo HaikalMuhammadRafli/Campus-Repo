@@ -11,4 +11,16 @@ public class Angsuran {
         this.jumlahBayar = jumlahBayar;
         this.sisaPinjaman = sisaPinjaman;
     }
+
+    public int getAngsuranKe() {
+        return angsuranKe;
+    }
+
+    public double getJumlahBayar() {
+        return jumlahBayar;
+    }
+
+    public double getSisaPinjaman() {
+        return sisaPinjaman;
+    }
 }

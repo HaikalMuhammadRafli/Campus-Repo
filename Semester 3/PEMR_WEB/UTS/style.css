@@ -1,0 +1,69 @@
+#sidebar {
+    width: 60px;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.btn-add {
+    padding: 1px 6px;
+    background-color: white;
+}
+
+.brand-name {
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+.brand-name-1 {
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.brand-name-2 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#container {
+    padding: 10px 20px;
+    margin-left: 60px;
+}
+
+#search {
+    height: 30px;
+    font-size: 8pt;
+    border-radius: 15px 0 0 15px;
+}
+
+#search-btn {
+    height: 30px;
+    font-size: 8pt;
+    border-radius: 0 15px 15px 0;
+}
+
+.card-body {
+    height: 230px;
+}
+
+.card-title {
+    font-size: 12pt;
+}
+
+.card-text {
+    font-size: 10pt;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#form-title {
+    height: 50px;
+    font-size: 18pt;
+    padding: 10px 0px;
+}
+
+#form-content {
+    padding: 10px 0px;
+    font-size: 10pt;
+}

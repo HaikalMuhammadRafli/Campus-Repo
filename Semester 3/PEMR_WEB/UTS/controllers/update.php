@@ -1,0 +1,21 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    include '../database/connection.php';
+
+    global $conn;
+
+    $id = $_POST['id'] ?? '';
+    $title = $_POST['title'] ?? '';
+    $content = $_POST['content'] ?? '';
+
+    if ($title && $content) {
+        $sql = mysqli_query($conn, "UPDATE notes SET title = '$title', content = '$content' WHERE id = '$id'");
+
+        if ($sql) {
+            // add notification
+        } else {
+            die('Query Failed: ' . mysqli_error($conn));
+        }
+    }
+}

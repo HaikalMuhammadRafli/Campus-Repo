@@ -14,7 +14,6 @@ if ($id) {
     }
 
     if (!empty($sql)) {
-        echo "Note successfully updated!";
         $note = $sql->fetch_assoc();
         include '../views/edit.php';
     } else {

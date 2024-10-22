@@ -5,10 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     global $conn;
 
-    $title = htmlspecialchars(isset($_POST['title']) ? $_POST['title'] : "No Title");
-    $content = htmlspecialchars(isset($_POST['content']) ? $_POST['content'] : "Empty content");
+    if (!empty($_POST['title']) || !empty($_POST['content'])) {
+        $title = !empty($_POST['title']) ? htmlspecialchars($_POST['title']) : 'No Title';
+        $content = !empty($_POST['content']) ? htmlspecialchars($_POST['content']) : 'Empty content';
 
-    if ($title || $content) {
         $sql = "INSERT INTO notes (title, content) VALUES ('$title', '$content')";
 
         if (mysqli_query($conn, $sql)) {

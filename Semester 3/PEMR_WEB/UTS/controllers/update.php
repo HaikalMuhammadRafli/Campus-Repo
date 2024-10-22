@@ -6,10 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $conn;
 
     $id = htmlspecialchars($_POST['id']);
-    $title = htmlspecialchars($_POST['title']);
-    $content = htmlspecialchars($_POST['content']);
+    $title = !empty($_POST['title']) ? htmlspecialchars($_POST['title']) : 'No Title';
+    $content = !empty($_POST['content']) ? htmlspecialchars($_POST['content']) : 'Empty content';
 
-    if ($title && $content) {
+    if ($title || $content) {
         $sql = mysqli_query($conn, "UPDATE notes SET title = '$title', content = '$content' WHERE id = '$id'");
 
         if (!$sql) {

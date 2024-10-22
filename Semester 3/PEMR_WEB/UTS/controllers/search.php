@@ -4,7 +4,7 @@ include '../database/connection.php';
 
 global $conn;
 
-$searchInput = htmlspecialchars(isset($_GET['search']) ? $_GET['search'] : '');
+$searchInput = !empty($_GET['search']) ? htmlspecialchars($_GET['search']) : '';
 $notes = mysqli_query($conn, "SELECT * FROM notes WHERE title LIKE '%$searchInput%' ORDER BY created_at DESC");
 $data = array();
 

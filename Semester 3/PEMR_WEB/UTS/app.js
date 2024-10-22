@@ -25,7 +25,7 @@ $(document).ready(function () {
             url: 'controllers/delete.php',
             method: 'POST',
             data: { id: noteId },
-            success: function (response) {
+            success: function () {
                 loadPage(selectedPage);
             }
         });
@@ -34,20 +34,9 @@ $(document).ready(function () {
     $(document).on('click', '#search-btn', function (e) {
         e.preventDefault();
         const searchInput = $('#search').val();
-        search(searchInput);
+        selectedPage = 'controllers/search.php';
+        loadPage(selectedPage, 'GET', { search: searchInput });
     });
-
-    function search(query) {
-        $.ajax({
-            url: 'controllers/search.php',
-            method: 'GET',
-            data: { search: query },
-            success: function (response) {
-                console.log(response)
-                $('#content').html(response);
-            },
-        });
-    }
 
     function loadPage(page = selectedPage, method = 'GET', data = {}) {
         $.ajax({
@@ -70,7 +59,7 @@ $(document).ready(function () {
                 url: 'controllers/create.php',
                 method: 'POST',
                 data: $(this).serialize(),
-                success: function (response) {
+                success: function () {
                     selectedPage = 'controllers/index.php';
                     loadPage(selectedPage);
                 },
@@ -84,7 +73,7 @@ $(document).ready(function () {
                 url: 'controllers/update.php',
                 method: 'POST',
                 data: $(this).serialize(),
-                success: function (response) {
+                success: function () {
                     selectedPage = 'controllers/index.php';
                     loadPage(selectedPage);
                 }

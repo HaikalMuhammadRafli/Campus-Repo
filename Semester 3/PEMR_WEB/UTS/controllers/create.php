@@ -5,8 +5,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     global $conn;
 
-    $title = mysqli_real_escape_string($conn, $_POST['title'] ?? '');
-    $content = mysqli_real_escape_string($conn, $_POST['content'] ?? '');
+    $title = htmlspecialchars($_POST['title'] ?? '');
+    $content = htmlspecialchars($_POST['content'] ?? '');
 
     if ($title && $content) {
         $sql = "INSERT INTO notes (title, content) VALUES ('$title', '$content')";

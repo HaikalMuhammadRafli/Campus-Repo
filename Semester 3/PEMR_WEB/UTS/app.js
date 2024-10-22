@@ -31,6 +31,24 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on('click', '#search-btn', function (e) {
+        e.preventDefault();
+        const searchInput = $('#search').val();
+        search(searchInput);
+    });
+
+    function search(query) {
+        $.ajax({
+            url: 'controllers/search.php',
+            method: 'GET',
+            data: { search: query },
+            success: function (response) {
+                console.log(response)
+                $('#content').html(response);
+            },
+        });
+    }
+
     function loadPage(page = selectedPage, method = 'GET', data = {}) {
         $.ajax({
             url: page,
@@ -41,10 +59,6 @@ $(document).ready(function () {
                 $('#content').html(response);
                 setupFormHandlers();
             },
-            error: function (xhr, textStatus, errorThrown) {
-                console.error('Error: ', xhr.responseText);
-                $('#content').html(`<p>Error loading page: ${textStatus} - ${errorThrown}</p>`);
-            }
         });
     }
 
@@ -60,9 +74,6 @@ $(document).ready(function () {
                     selectedPage = 'controllers/index.php';
                     loadPage(selectedPage);
                 },
-                error: function () {
-                    $('#formResponse').html('<p>Error submitting form.</p>');
-                }
             });
         });
 

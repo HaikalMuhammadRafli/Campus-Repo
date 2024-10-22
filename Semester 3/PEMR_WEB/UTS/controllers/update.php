@@ -12,9 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($title && $content) {
         $sql = mysqli_query($conn, "UPDATE notes SET title = '$title', content = '$content' WHERE id = '$id'");
 
-        if ($sql) {
-            echo "Note successfully updated!";
-        } else {
+        if (!$sql) {
             die('Query Failed: ' . mysqli_error($conn));
         }
     }

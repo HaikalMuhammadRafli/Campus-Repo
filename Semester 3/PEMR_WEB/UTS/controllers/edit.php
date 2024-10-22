@@ -16,9 +16,5 @@ if ($id) {
     if (!empty($sql)) {
         $note = $sql->fetch_assoc();
         include '../views/edit.php';
-    } else {
-        echo "Note update failed!";
     }
-} else {
-    echo "Note not found!";
 }

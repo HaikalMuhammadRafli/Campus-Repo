@@ -28,7 +28,6 @@ $(document).ready(function () {
             method: 'POST',
             data: { id: noteId },
             success: function (response) {
-                alert(response);
                 loadPage(selectedPage);
             }
         });

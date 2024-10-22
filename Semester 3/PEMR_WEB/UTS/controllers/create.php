@@ -19,6 +19,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "Fill one element of the note first!";
     }
-
-    include '../views/create.php';
 }

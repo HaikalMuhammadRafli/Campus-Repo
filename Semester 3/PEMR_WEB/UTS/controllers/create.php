@@ -5,19 +5,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     global $conn;
 
-    $title = htmlspecialchars($_POST['title'] ?? '');
-    $content = htmlspecialchars($_POST['content'] ?? '');
+    $title = htmlspecialchars(isset($_POST['title']) ? $_POST['title'] : "No Title");
+    $content = htmlspecialchars(isset($_POST['content']) ? $_POST['content'] : "Empty content");
 
-    if ($title && $content) {
+    if ($title || $content) {
         $sql = "INSERT INTO notes (title, content) VALUES ('$title', '$content')";
 
         if (mysqli_query($conn, $sql)) {
-            echo 'Note created successfully!';
+            echo "Note successfully added!";
         } else {
             die('Query Failed: ' . mysqli_error($conn));
         }
     } else {
-        echo 'Both title and content are required.';
+        echo "Fill one element of the note first!";
     }
 
     include '../views/create.php';

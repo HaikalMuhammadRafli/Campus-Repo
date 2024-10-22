@@ -2,7 +2,6 @@ $(document).ready(function () {
     let selectedPage = 'controllers/index.php';
 
     loadPage(selectedPage);
-    console.log("Loading page: " + selectedPage);
 
     $(document).on('click', '#home-btn', function () {
         selectedPage = 'controllers/index.php';
@@ -10,7 +9,6 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '#create-btn', function () {
-        console.log("Create button clicked");
         selectedPage = 'views/create.php';
         loadPage(selectedPage);
     });
@@ -41,7 +39,6 @@ $(document).ready(function () {
             success: function (response) {
                 $('#content').html('');
                 $('#content').html(response);
-                console.log("Page loaded successfully.");
                 setupFormHandlers();
             },
             error: function (xhr, textStatus, errorThrown) {
@@ -60,7 +57,6 @@ $(document).ready(function () {
                 method: 'POST',
                 data: $(this).serialize(),
                 success: function (response) {
-                    $('#formResponse').html('<p>' + response + '</p>');
                     selectedPage = 'controllers/index.php';
                     loadPage(selectedPage);
                 },
@@ -84,4 +80,4 @@ $(document).ready(function () {
             });
         });
     }
-});
+})

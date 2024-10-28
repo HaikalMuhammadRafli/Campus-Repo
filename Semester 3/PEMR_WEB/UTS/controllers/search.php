@@ -7,7 +7,8 @@ $notes = sqlsrv_query($conn, "SELECT * FROM notes WHERE title LIKE ? ORDER BY cr
 $data = array();
 
 if (!$notes) {
-    die( print_r( sqlsrv_errors(), true));
+    $errors = print_r(sqlsrv_errors(), true);
+    echo "<script>alert('$errors');</script>";
 }
 
 if (!empty($notes)) {

@@ -10,7 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($sql) {
             // success
         } else {
-            die( print_r( sqlsrv_errors(), true));
+            $errors = print_r(sqlsrv_errors(), true);
+            echo "<script>alert('$errors');</script>";
         }
     } else {
         echo "Note not found!";

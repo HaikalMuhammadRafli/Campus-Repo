@@ -32,18 +32,6 @@ $(document).ready(function () {
         });
     });
 
-    $(document).on('input', '#search', function (e) {
-        e.preventDefault()
-        let cooldownTimer
-
-        clearTimeout(cooldownTimer)
-        cooldownTimer = setTimeout(function () {
-            const key = $('#search').val()
-            selectedPage = 'controllers/search.php';
-            loadPage(selectedPage, 'GET', { search: key })
-        }, 500);
-    })
-
     function loadPage(page = selectedPage, method = 'GET', data = {}) {
         $.ajax({
             url: page,
@@ -71,7 +59,7 @@ $(document).ready(function () {
     }
 
     function setupFormHandlers() {
-        let cooldownTimer;
+        let cooldownTimer
 
         $('#save-btn').on('click', function (e) {
             e.preventDefault()
@@ -105,6 +93,17 @@ $(document).ready(function () {
                     }
                 })
             }, 500)
+        })
+
+        $(document).on('input', '#search', function (e) {
+            e.preventDefault()
+
+            clearTimeout(cooldownTimer)
+            cooldownTimer = setTimeout(function () {
+                const key = $('#search').val()
+                selectedPage = 'controllers/search.php';
+                loadPage(selectedPage, 'GET', { search: key })
+            }, 500);
         })
     }
 

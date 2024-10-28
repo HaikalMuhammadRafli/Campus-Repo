@@ -1,19 +1,17 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    include '../database/connection.php';
-
-    global $conn;
 
     $id = htmlspecialchars($_POST['id']);
     $title = !empty($_POST['title']) ? htmlspecialchars($_POST['title']) : 'No Title';
     $content = !empty($_POST['content']) ? htmlspecialchars($_POST['content']) : 'Empty content';
+    $color = !empty($_POST['color']) ? htmlspecialchars($_POST['color']) : 'F3C5C5';
 
     if ($title || $content) {
-        $sql = mysqli_query($conn, "UPDATE notes SET title = '$title', content = '$content' WHERE id = '$id'");
+        $sql = sqlsrv_query($conn, "UPDATE notes SET title = ?, content = ?, color = ? WHERE id = ?", [$title, $content, $color, $id]);
 
         if (!$sql) {
-            die('Query Failed: ' . mysqli_error($conn));
+            die( print_r( sqlsrv_errors(), true));
         }
     }
 }

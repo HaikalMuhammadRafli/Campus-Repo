@@ -13,6 +13,7 @@
 
 body {
     background-color: var(--bg);
+    height: 72vh;
 }
 
 #sidebar {

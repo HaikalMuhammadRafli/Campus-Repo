@@ -2,17 +2,15 @@
 
 include '../database/connection.php';
 
-global $conn;
-
 $id = $_GET['id'] ?? NULL;
 
 if ($id) {
-    $sql = mysqli_query($conn, "SELECT * FROM notes WHERE id = '$id'");
+    $sql = mysqli_query($conn, "SELECT * FROM notes WHERE id = ?", [$id]);
 
     if (!$sql) {
-        die('Query Failed: ' . mysqli_error($conn));
+        die( print_r( sqlsrv_errors(), true));
     } else {
-        $note = $sql->fetch_assoc();
+        $note = sqlsrv_fetch_array($sql, SQLSRV_FETCH_ASSOC);
     }
 }
 

@@ -1,8 +1,8 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "memokeeper";
+$serverName = "LAPTOP-EB30BL56\SQLEXPRESS";
+$connectionInfo = [
+    "Database" => "memokeeper"
+];
 
-$conn = new mysqli($servername, $username, $password, $database) or die("Error connecting to MySQL Server");
+$conn =  sqlsrv_connect($serverName, $connectionInfo) or die(print_r( sqlsrv_errors(), true));

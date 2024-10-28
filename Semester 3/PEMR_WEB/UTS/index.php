@@ -14,7 +14,7 @@
     <title>MemoKeeper</title>
 </head>
 
-<body class="d-flex" style="height: 100vh;">
+<body class="d-flex">
     <section id="sidebar" class="bg-prim h-100 d-flex flex-column justify-content-start align-items-center fixed-top pt-3">
         <i class="fa-brands fa-42-group text-white fs-4 mt-2"></i>
         <div class="mt-4"></div>
@@ -34,7 +34,7 @@
             </form>
         </section>
 
-        <section id="content" class="w-100 mt-4"></section>
+        <section id="content" class="w-100 mt-4 h-100"></section>
 
     </section>
 

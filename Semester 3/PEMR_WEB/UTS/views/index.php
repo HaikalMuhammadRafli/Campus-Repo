@@ -5,7 +5,7 @@
         <?php if (($data)) { ?>
             <?php foreach ($data as $note) { ?>
                 <div class="view-note col px-2 pb-3" data-id="<?= $note['id']; ?>">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4" style="background-color: #<?= $note['color'] ?>;">
                         <div class="card-body">
                             <div class="h-100 overflow-hidden">
                                 <h5 class="card-title"><?= $note['title'] ?></h5>

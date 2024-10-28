@@ -89,7 +89,7 @@ $(document).ready(function () {
             })
         })
 
-        $('#form-title-edit, #form-content-edit').on('input', function (e) {
+        $('#form-title-edit, #form-content-edit, .form-check-input').on('input', function (e) {
             e.preventDefault()
             clearTimeout(cooldownTimer)
 

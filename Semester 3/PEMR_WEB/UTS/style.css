@@ -5,6 +5,11 @@
     --danger: #df5252;
     --white: #ffffff;
     --bg: #f5f5f5;
+
+    --red: #F3C5C5;
+    --yellow: #FAE0C1;
+    --purple: #D5D2FE;
+    --green: #BFF0DB;
 }
 
 * {
@@ -72,6 +77,10 @@ body {
     border: 0;
 }
 
+.card {
+    border: none;
+}
+
 .card-body {
     height: 230px;
 }
@@ -122,4 +131,24 @@ body {
 
 .color-unselected {
     color: var(--unselected);
+}
+
+#red-radio {
+    background-color: var(--red);
+}
+
+#yellow-radio {
+    background-color: var(--yellow);
+}
+
+#purple-radio {
+    background-color: var(--purple);
+}
+
+#green-radio {
+    background-color: var(--green);
+}
+
+.form-check-input {
+    border: none;
 }

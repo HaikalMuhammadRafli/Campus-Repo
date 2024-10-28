@@ -1,11 +1,25 @@
 <?php if (isset($note)) { ?>
-    <section class="d-flex justify-content-between mx-3 mt-3">
-        <button id="cancel-btn" class="btn color-prim"><i class="fa-solid fa-angles-left"></i></button>
-        <button id="delete-btn" class="btn color-danger" data-id="<?= $note['id']; ?>"><i
-                class="fa-solid fa-trash-can"></i></button>
-    </section>
-    <section class="mx-5">
-        <form id="edit-note" action="controllers/update.php" method="POST">
+    <form id="edit-note" action="controllers/update.php" method="POST">
+        <section class="d-flex justify-content-between mx-3 mt-3">
+            <button id="cancel-btn" class="btn color-prim"><i class="fa-solid fa-angles-left"></i></button>
+            <div class="d-flex justify-content-around align-items-center w-25">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="red-radio" value="F3C5C5" checked>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="yellow-radio" value="FAE0C1">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="purple-radio" value="D5D2FE">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="green-radio" value="BFF0DB">
+                </div>
+            </div>
+            <button id="delete-btn" class="btn color-danger" data-id="<?= $note['id']; ?>"><i
+                    class="fa-solid fa-trash-can"></i></button>
+        </section>
+        <section class="mx-5">
             <input type="hidden" name="id" value="<?= $note['id'] ?>">
             <div class="form-group">
                 <div class="input-group">
@@ -20,8 +34,8 @@
                         placeholder="Start typing..." rows="32"><?= $note['content'] ?></textarea>
                 </div>
             </div>
-        </form>
-    </section>
+        </section>
+    </form>
     <?php
 } else {
     ?>

@@ -8,9 +8,9 @@ if ($id) {
     $sql = sqlsrv_query($conn, "SELECT created_at, content FROM notes WHERE id = ?", [$id]);
 
     if (!$sql) {
-        die( print_r( sqlsrv_errors(), true));
+        die(print_r(sqlsrv_errors(), true));
     } else {
         $note = sqlsrv_fetch_array($sql, SQLSRV_FETCH_ASSOC);
-        echo date('d F Y', strtotime($note['created_at']))  . " | " .  strlen($note['content']) . " characters";
+        echo $note['created_at']->format('d F Y') . " | " . strlen($note['content']) . " characters";
     }
 }

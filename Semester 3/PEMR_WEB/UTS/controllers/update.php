@@ -1,6 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    include '../database/connection.php';
 
     $id = htmlspecialchars($_POST['id']);
     $title = !empty($_POST['title']) ? htmlspecialchars($_POST['title']) : 'No Title';
@@ -11,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = sqlsrv_query($conn, "UPDATE notes SET title = ?, content = ?, color = ? WHERE id = ?", [$title, $content, $color, $id]);
 
         if (!$sql) {
-            die( print_r( sqlsrv_errors(), true));
+            die(print_r(sqlsrv_errors(), true));
         }
     }
 }

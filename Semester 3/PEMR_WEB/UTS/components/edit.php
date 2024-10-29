@@ -1,5 +1,5 @@
 <?php if (isset($note)) { ?>
-    <form id="edit-note" action="controllers/update.php" method="POST">
+    <form id="edit-note">
         <section class="d-flex justify-content-between mx-3 mt-3">
             <button id="cancel-btn" class="btn color-prim"><i class="fa-solid fa-angles-left"></i></button>
             <div class="d-flex justify-content-around align-items-center w-25">

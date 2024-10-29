@@ -4,16 +4,20 @@
             <button type="button" id="cancel-btn" class="btn color-prim"><i class="fa-solid fa-angles-left"></i></button>
             <div class="d-flex justify-content-around align-items-center w-25">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="color" id="red-radio" value="F3C5C5" checked>
+                    <input class="form-check-input" type="radio" name="color" id="red-radio" value="F3C5C5"
+                        <?= $note['color'] == 'F3C5C5' ? "checked" : "" ?>>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="color" id="yellow-radio" value="FAE0C1">
+                    <input class="form-check-input" type="radio" name="color" id="yellow-radio" value="FAE0C1"
+                        <?= $note['color'] == 'FAE0C1' ? "checked" : "" ?>>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="color" id="purple-radio" value="D5D2FE">
+                    <input class="form-check-input" type="radio" name="color" id="purple-radio" value="D5D2FE"
+                        <?= $note['color'] == 'D5D2FE' ? "checked" : "" ?>>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="color" id="green-radio" value="BFF0DB">
+                    <input class="form-check-input" type="radio" name="color" id="green-radio" value="BFF0DB"
+                        <?= $note['color'] == 'BFF0DB' ? "checked" : "" ?>>
                 </div>
             </div>
             <button id="delete-btn" class="btn color-danger" data-id="<?= $note['id']; ?>"><i

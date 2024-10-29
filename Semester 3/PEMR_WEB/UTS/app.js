@@ -32,6 +32,11 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on('click', '#cancel-btn', function () {
+        selectedContent = 'controllers/edit.php'
+        loadView(selectedContent)
+    });
+
     function loadPage(page = selectedPage, method = 'GET', data = {}) {
         $.ajax({
             url: page,

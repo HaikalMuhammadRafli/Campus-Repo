@@ -1,6 +1,6 @@
 <form id="create-note">
     <section class="d-flex justify-content-between mx-3 mt-3">
-        <button id="cancel-btn" class="btn color-prim"><i class="fa-solid fa-angles-left"></i></button>
+        <button id="cancel-btn" type="button" class="btn color-prim"><i class="fa-solid fa-angles-left"></i></button>
         <div class="d-flex justify-content-around align-items-center w-25">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="color" id="red-radio" value="F3C5C5" checked>
